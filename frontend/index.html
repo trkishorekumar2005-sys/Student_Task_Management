@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Redirect to dashboard if already logged in
+        if (localStorage.getItem('student_token')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">📚</span>
+                <span>Student Task Manager</span>
+            </a>
+            <div class="user-nav">
+                <a href="login.html" class="btn btn-secondary btn-sm">Log In</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero-wrapper">
+        <div class="hero-card">
+            <div class="hero-icon">🎓</div>
+            <h1 class="hero-title">Stay Organized & On Track</h1>
+            <p class="hero-desc">
+                A simple, distraction-free task management tool built specifically for students.
+                Track homework, project milestones, and exam prep with ease.
+            </p>
+            <div class="hero-actions">
+                <a href="register.html" class="btn btn-primary">Create Free Account</a>
+                <a href="login.html" class="btn btn-secondary">Student Log In</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Student Task Manager. Simple & student-friendly productivity.</p>
+        </div>
+    </footer>
+</body>
+</html>
