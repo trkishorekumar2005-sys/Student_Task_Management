@@ -7,6 +7,10 @@ const pool = mysql.createPool({
     password: process.env.DB_PASSWORD || '',
     database: process.env.DB_NAME || 'student_task_manager',
     port: process.env.DB_PORT || 3306,
+       port: process.env.DB_PORT || 3306,
+   ssl: {
+     minVersion: 'TLSv1.2'
+  },
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
@@ -21,6 +25,9 @@ async function initializeDatabase() {
             user: process.env.DB_USER || 'root',
             password: process.env.DB_PASSWORD || '',
             port: process.env.DB_PORT || 3306
+            ssl: {
+    minVersion: 'TLSv1.2'
+},
         });
 
         const dbName = process.env.DB_NAME || 'student_task_manager';
